@@ -2,6 +2,7 @@
 
 int main (void)
 {
-	puts("Programming is like building a multilingual puzzle");
+	/* this code ptints the statment */
+	puts ("\"Programming is like building a multilingual puzzle");
 	return 0;
 }
