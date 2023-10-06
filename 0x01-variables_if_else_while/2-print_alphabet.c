@@ -7,7 +7,9 @@ int main(void)
 {
 	char c;
 	for (c = 'a' ; c <= 'z' ; c++)
+	{
 		char d = (char) c;
 		putchar("%c", d);
+	}
 	return (0);
 }
