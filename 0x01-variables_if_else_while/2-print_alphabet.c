@@ -6,10 +6,7 @@
 int main(void)
 {
 	char c;
-	for (c = 'a' ; c <= 'z' ; c++)
-	{
-		char d = (char) c;
-		putchar("%c", d);
-	}
+	for (c = 'a' ; c <= 'z' ; c++)	
+		putchar(c);
 	return (0);
 }
