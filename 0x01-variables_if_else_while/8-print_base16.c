@@ -6,9 +6,10 @@
 int main(void)
 {
 	char c;
+	int a;
 
-	for (c = 0 ; c <= 9 ; c++)
-		putchar(c);
+	for (a = 0 ; a <= 9 ; a++)
+		putchar(c + '0');
 	for (c = 'a' ; c <= 'f' ; c++)
 		putchar (c);
 	putchar('\n');
