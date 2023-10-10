@@ -8,4 +8,4 @@ void times_table(void);
 int _putchar(int);
 int _isalpha(int);
 int print_sign(int n);
-
+int _abs(int);
