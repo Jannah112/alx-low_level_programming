@@ -6,27 +6,34 @@
 void print_to_98(int n)
 {
 	int e;
-	
-	if (n < 98)
-	{
-		for (e = n; e <= 98; e++)
-	{
-		putchar(e + '0');
-	}
-	}
-	else if (n > 98)
+
+	if (n >= 98)
 	{
 		for (e = n; e >= 98; e--)
 		{
 			putchar(e + '0');
+			while(e != 98)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 		}
 	}
-	while (n != 98)
+	if (n < 98)
 	{
-		putchar(',');
-		putchar(' ');
+		for (e = n; n <= 98 ; e++)
+		{
+			putchar(e + '0');
+			while(e != 98)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+		}
 	}
 	putchar('\n');
 }
+
+			
 
 
