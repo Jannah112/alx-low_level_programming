@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	putchar('_');
-	int l = "p";
+i	putchar('_');
+	char l = "p";
 	putchar(l);
 	l = "u";
 	putchar(l);
