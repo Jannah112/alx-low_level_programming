@@ -7,7 +7,10 @@
  */
 void print_alphabet(void)
 {
-	char y;
+	/**
+	 * this function return alphabet
+	 */
+       	char y;
 
 	for (y = 'a'; y <= 'z'; y++)
 	{
