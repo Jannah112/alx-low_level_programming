@@ -1,16 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * main - entry point
- * print_alphabet - print alphabet in lower casr
- * Return: always 0 (Success)
+ * print_alphabet - print alphabet in lower case
  */
 void print_alphabet(void)
 {
-	/**
-	 * this function return alphabet
-	 */
-       	char y;
+	char y;
 
 	for (y = 'a'; y <= 'z'; y++)
 	{
