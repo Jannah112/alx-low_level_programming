@@ -5,7 +5,7 @@
  * @a: parameter
  * Return: return abs val
  */
-int _abs (int a)
+int _abs(int a)
 {
 	if (a < 0)
 	{
