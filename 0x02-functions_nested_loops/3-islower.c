@@ -6,8 +6,13 @@
  */
 int _islower(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (1);
+	return (islower(c));
+}
+void test_islower(int n)
+{
+	int r;
 
-	else return (0);
+	r = _islower(n);
+	putchar(r + '0');
+	putchar('\n');
 }
