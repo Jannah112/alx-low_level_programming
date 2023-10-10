@@ -2,9 +2,9 @@
 #include <stdio.h>
 /**
  * add - add two int
- * a - parameter
- * b - parameter
- * Rerurn: return int type
+ * int a - parameter
+ * int b - parameter
+ * return - return int type
  */
 int add(int a, int b)
 {
