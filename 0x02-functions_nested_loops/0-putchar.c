@@ -7,19 +7,19 @@
 int main(void)
 {
 i	putchar('_');
-	char l = "p";
+	char l = 'p';
 	putchar(l);
-	l = "u";
+	l = 'u';
 	putchar(l);
-	l ="t";
+	l ='t';
 	putchar(l);
-	l = "c";
+	l = 'c';
 	putchar(l);
-	l = "h";
+	l = 'h';
 	putchar(l);
-	l = "a";
+	l = 'a';
 	putchar(l);
-	l = "r";
+	l = 'r';
 	putchar(l);
 	putchar('\n');
 	return (0);
