@@ -8,5 +8,9 @@
  */
 int mul(int a, int b)
 {
-	return (( a * b) + '0');
+	int c;
+
+	c = a * b;
+	c = c + '0';
+	return (c);
 }
