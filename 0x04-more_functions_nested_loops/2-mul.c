@@ -1,7 +1,7 @@
 #include "main.h"
-#include <stdio>
+#include <stdio.h>
 /**
- * mul - f name
+ * mul - f mane
  * @a: par
  * @b: par
  * Return: return mul
