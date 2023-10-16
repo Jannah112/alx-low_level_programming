@@ -8,14 +8,16 @@ void rev_string(char *s)
 	int i = 0;
 	int count = 0;
 	int j;
-
+	char *f;
+	
 	while (*(s + i) != 0)
 	{
 		count += 1;
 		i++;
 	}
 	count = count - 1;
+	f = (char *) malloc (count * sizeof(char));
 	for (j = count; j >= 0; j--)
-		_putchar(*(s + j));
-	_putchar('\n');
+		*(f - count - j - 1) = *(s + j);
 }
+
