@@ -2,8 +2,8 @@
 #include <stdlib.h>
 /**
  * _strcpy - f name
- * @dest: par 
  * @src: par
+ * @dest: name
  * Return: return
  */
 char *_strcpy(char *dest, char *src)
@@ -19,5 +19,4 @@ char *_strcpy(char *dest, char *src)
 	}
 	dest[c] = '\0';
 	return (dest);
-}
-	
+}	
