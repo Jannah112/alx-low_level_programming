@@ -8,7 +8,7 @@ void print_rev(char *s)
 	int i = 0;
 	int count = 0;
 	int j;
-	char f[];
+	char f[ ];
 	int y = 0;
 
 	while (*(s + i) != 0)
@@ -25,6 +25,6 @@ void print_rev(char *s)
 		}
 		y++;
 	}
-	*s = f;
+	s = f;
 	_putchar('\n');
 }
