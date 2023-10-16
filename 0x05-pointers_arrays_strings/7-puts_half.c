@@ -18,13 +18,13 @@ void puts_half (char *str)
 	{
 		n = c / 2;
 		for (g = n; g < c; g++)
-			_putchar(*(str + g));
+			_putchar (*(str + g));
 	}
 	else
 	{
-		n = ((c - 1) / 2);
+		n = ((c + 1) / 2);
 		for (g = n; g < c; g++)
-			_putchar(*(str + g));
+			_putchar (*(str + g));
 	}
 	_putchar('\n');
 }
