@@ -10,13 +10,13 @@ void rev_string(char *s)
 
 	while (s[i] != 0)
 	{
-		len q+= 1;
+		len += 1;
 	}
 	x = len - 1;
 	for (i = 0; i < (len / 2); i++)
 	{
 		char temp = s[i];
 		s[i] = s[x - i];
-		s[x - i] = s[i];
+		s[x - i] = temp;
 	}
 }
