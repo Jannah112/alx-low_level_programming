@@ -8,7 +8,7 @@ void print_rev(char *s)
 	int i = 0;
 	int count = 0;
 	int j;
-	char f[ ];
+	char f[460];
 	int y = 0;
 
 	while (*(s + i) != 0)
