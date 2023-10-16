@@ -1,4 +1,4 @@
-#include "mqin.h"
+#include "main.h"
 /**
  * rev_string - f name
  * @s: name
