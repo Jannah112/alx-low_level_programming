@@ -6,11 +6,19 @@
 void puts2(char *str)
 {
 	int i = 0;
+	int c = 0;
+	int g;
 
 	while (*(str + i) != 0)
 	{
-		_putchar(*(str + i));
-		i = i + 2;
+		c = c + 1;
+		i++;
+	}
+
+	while (g < c)
+	{
+		_putchar(*(str + g));
+		g = g + 2;
 	}
 	_putchar('\n');
 }
