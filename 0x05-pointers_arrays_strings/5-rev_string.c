@@ -1,25 +1,22 @@
-#include "main.h"
-#include <stdlib.h>
+#include "mqin.h"
 /**
  * rev_string - f name
- * @s: par
+ * @s: name
  */
-void rev_string (char *s)
+void rev_string(char *s)
 {
-	int i = 0;
-	int count = 0;
-	int j;
-	char *f;
-	
-	while (*(s + i) != 0)
-	{
-		count += 1;
-		i++;
-	}
-	count = count - 1;
-	f = (char *) malloc (count * sizeof(char));
-	for (j = count; j >= 0; j--)
-		*(f - count - j - 1) = *(s + j);
-	s = f;
-}
+	int len = 0;
+	int i, x;
 
+	while (s[i] != 0)
+	{
+		len q+= 1;
+	}
+	x = len - 1;
+	for (i = 0; i < (len / 2); i++)
+	{
+		char temp = s[i];
+		s[i] = s[x - i];
+		s[x - i] = s[i];
+	}
+}
