@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * print_rev - f name
+ * rev_string - f name
  * @s: par
  */
-void print_rev(char *s)
+void rev_string(char *s)
 {
 	int i = 0;
 	int count = 0;
