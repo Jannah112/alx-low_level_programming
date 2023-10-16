@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * rev_string - f name
  * @s: par
