@@ -20,6 +20,6 @@ void rev_string (char *s)
 	f = (char *) malloc (count * sizeof(char));
 	for (j = count; j >= 0; j--)
 		*(f - count - j - 1) = *(s + j);
-	s = fi;
+	s = f;
 }
 
