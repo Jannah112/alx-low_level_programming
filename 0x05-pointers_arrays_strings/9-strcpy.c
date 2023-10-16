@@ -1,5 +1,5 @@
 #include "main.h"
-#include < stdlib.h>
+#include <stdlib.h>
 /**
  * _strcpy - f name
  * @dest: par 
