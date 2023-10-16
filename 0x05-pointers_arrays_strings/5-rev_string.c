@@ -8,6 +8,8 @@ void print_rev(char *s)
 	int i = 0;
 	int count = 0;
 	int j;
+	char f[];
+	int y = 0;
 
 	while (*(s + i) != 0)
 	{
@@ -15,15 +17,14 @@ void print_rev(char *s)
 		i++;
 	}
 	count = count - 1;
-	char ss [count];
-	for (j = count; j >= 0; j--)
+	while (y <= count)
 	{
-		while (i <= count)
+		for (j = count; j >= 0; j--)
 		{
-			*(ss + i) = *(s +j);
-			i++;
+			*(f + i) = *(s + j);
 		}
+		y++;
 	}
-	*s = ss;
+	*s = f;
 	_putchar('\n');
 }
