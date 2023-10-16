@@ -8,8 +8,6 @@ void rev_string(char *s)
 	int i = 0;
 	int count = 0;
 	int j;
-	char f[460];
-	int y = 0;
 
 	while (*(s + i) != 0)
 	{
@@ -17,14 +15,7 @@ void rev_string(char *s)
 		i++;
 	}
 	count = count - 1;
-	while (y <= count)
-	{
-		for (j = count; j >= 0; j--)
-		{
-			*(f + y) = *(s + j);
-		}
-		y++;
-	}
-	s = f;
+	for (j = count; j >= 0; j--)
+		_putchar(*(s + j));
 	_putchar('\n');
 }
