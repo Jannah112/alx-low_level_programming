@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _strcat - name
+ * _strncat - name
  * @dest: pa
  * @src: par
  * @n: pa
@@ -16,10 +16,11 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		i++;
 	}
-	for (j = i; j < (i + n); j++)
+	int x = i + n;
+
+	for (j = i; j < x; j++)
 	{
 		dest[j] = src[j - i];
 	}
-	dest[i + n] = '\0';
-	return (dest);
-}
+}	
+
