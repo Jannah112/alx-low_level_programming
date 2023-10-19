@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _strncat - name
+ * _strncat - function name
  * @dest: pa
  * @src: par
  * @n: pa
