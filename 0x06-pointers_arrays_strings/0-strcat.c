@@ -3,6 +3,7 @@
  * _strcat - name
  * @dest: par
  * @src: par
+ * Return: return
  */
 char *_strcat(char *dest, char *src)
 {
