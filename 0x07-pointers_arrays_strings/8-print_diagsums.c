@@ -3,7 +3,7 @@
 /**
  * print_diagsums - f name
  * @a: par1
- * @size:par2
+ * @size: :par2
  */
 void print_diagsums(int *a, int size)
 {
