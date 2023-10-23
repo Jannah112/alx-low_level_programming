@@ -4,6 +4,7 @@
  * @s: par1
  * @b: par2
  * @n: par3
+ * Return: return
  */
 char *_memset(char *s, char b, unsigned int n)
 {
