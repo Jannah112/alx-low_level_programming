@@ -1,0 +1,18 @@
+#include "main.h"
+/**
+ * _memset - f name
+ * @s: par1
+ * @b: par2
+ * @n: par3
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
+	return (s);
+}
+		
