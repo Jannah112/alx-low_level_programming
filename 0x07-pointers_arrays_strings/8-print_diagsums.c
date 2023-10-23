@@ -1,4 +1,5 @@
-#include " main.h"
+#include "main.h"
+#include <stdio.h>
 /**
  * print_diagsums - f name
  * @size: par 
@@ -6,31 +7,18 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i , j, s1 = 0, s2 = 0;
+	int i , j, c, b, s1 = 0, s2 = 0, x;
 
-	for (i = 0; i < size; i++)
+	x = size * size;
+	c = size + 1;
+	b = size - 1;
+	for (i = 0; i < x; i += c)
 	{
-		for (j = 0; j < size; j++)
-		{
-			if ( i == j)
-			{
-				s1 = s1 + a[i][j];
-			}
-		}
+		s1 += a[i];
 	}
-	_putchar(s2 + '0');
-	_putchar(',');
-	_putchar(' ');
-	for(i = size; i >= 0; i--)
+	for (j = 0; j <= x - size ; j += b)
 	{
-		for (j = size; j >= 0; j--)
-		{
-			if (i == j)
-			{
-				s2 = s2 + a[i][j];
-			}
-		}
+		s2 += a[j];
 	}
-	_putchar(s2 + '0');
+	printf("%d, %d\n", s1, s2);
 }
-		
