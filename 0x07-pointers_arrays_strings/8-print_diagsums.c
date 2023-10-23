@@ -2,12 +2,12 @@
 #include <stdio.h>
 /**
  * print_diagsums - f name
- * @size: par 
- * @a: par2
+ * @a: par1
+ * @size:par2
  */
 void print_diagsums(int *a, int size)
 {
-	int i , j, c, b, s1 = 0, s2 = 0, x;
+	int i, j, c, b, s1 = 0, s2 = 0, x;
 
 	x = size * size;
 	c = size + 1;
