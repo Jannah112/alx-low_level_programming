@@ -2,6 +2,7 @@
 /**
  * factorial - f name
  * @n: par
+ * Return: return
  */
 int factorial(int n)
 {
