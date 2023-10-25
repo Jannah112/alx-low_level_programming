@@ -5,8 +5,6 @@
  * @s: par
  * Return: return
  */
-int x = 0;
-
 int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
