@@ -4,6 +4,7 @@
  * str_concat - f name
  * @s1: hh
  * @s2: cc
+ * Return: jj
  */
 char *str_concat(char *s1, char *s2)
 {
@@ -30,6 +31,7 @@ char *str_concat(char *s1, char *s2)
 			s[x] = s1[x];
 		}
 	}
+	y = x;
 	if (s2 != NULL)
 	{
 		for (y = x; y < a + b; y++)
@@ -39,4 +41,4 @@ char *str_concat(char *s1, char *s2)
 	}
 	s[y] = '\0';
 	return (s);
-}	
+}
