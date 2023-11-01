@@ -22,9 +22,9 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	for (i = 0; i < 5; i++)
+	for (i = 0; i < 5 && c >= 0; i++)
 	{
-		if (c >= a[i] && c > 0)
+		if (c >= a[i])
 		{
 			nc += 1;
 			c -= a[i];
