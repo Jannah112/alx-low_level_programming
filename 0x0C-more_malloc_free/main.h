@@ -4,4 +4,9 @@ void *malloc_checked(unsigned int b);
 char *string_nconcat(char *s1, char *s2, unsigned int n);
 void *_calloc(unsigned int nmemb, unsigned int size);
 int *array_range(int min, int max);
+void printe(void);
+int _atoi(char *);
+int _isdigit(char *);
+int _putchar(char);
+void print_number(int n);
 #endif
