@@ -3,6 +3,7 @@
 /**
  * malloc_checked - f name
  * @b: bl
+ * Return: hh
  */
 void *malloc_checked(unsigned int b)
 {
