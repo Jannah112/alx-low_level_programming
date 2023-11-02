@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  * _calloc - f name
- * @nmemb: jj
+ * @nmemb: j
  * @size: jj
  * Return: hh
  */
@@ -16,7 +16,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	p = malloc(nmemb * size);
 	if (p == NULL)
 		return (NULL);
-	for (i = 0; i < nmemb; i++)
+	for (i = 0; i < nmemb * size; i++)
 	{
 		p[i] = 0;
 	}
