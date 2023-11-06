@@ -51,13 +51,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 		j++;
 	}
 	}
-	a->name = (char *) (malloc(sizeof(char) * i));
+	a->name = (char *) (malloc(sizeof(char) * (i + 1));
 	if (a->name == NULL)
 	{
 		free(a);
 		return (NULL);
 	}
-	a->owner = (char *) (malloc(sizeof(char) * j));
+	a->owner = (char *) (malloc(sizeof(char) * (j + 1)));
 	if (a->owner == NULL)
 	{
 		free(a->name);
