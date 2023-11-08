@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 		printf("Erorr\n");
 		exit(99);
 	}
-	calc = (*ptr)(num1, num2);
+	calc = ptr(num1, num2);
 	printf("%d\n", calc);
 	return (0);
 }
