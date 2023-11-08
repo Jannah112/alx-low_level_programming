@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 4)
 	{
-		printf("Erorr\n");
+		printf("Error\n");
 		exit(98);
 	}
 	num1 = atoi(argv[1]);
@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	ptr = get_op_func(argv[2]);
 	if (ptr == 0)
 	{
-		printf("Erorr\n");
+		printf("Error\n");
 		exit(99);
 	}
 	calc = ptr(num1, num2);
