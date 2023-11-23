@@ -26,6 +26,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	a = (char *) malloc(sizeof(char) * s);
 	if (a == NULL)
 		return (-1);
+	a[s] = '\0';
 	s--;
 	while (s >= 0)
 	{
