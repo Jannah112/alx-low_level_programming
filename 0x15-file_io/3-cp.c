@@ -21,13 +21,13 @@ int main(int argc, char *argv[])
 	do {
 		if (opf == -1 || rf == -1)
 		{
-		dprintf(STDOUT_FILENO, "Error: Can't read from file%s\n", argv[1]);
+		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 		}
 		wt = write(opt, buf, rf);
 		if (wt == -1 || opt == -1)
 		{
-		dprintf(STDOUT_FILENO, "Error: Can't write to%s\n", argv[2]);
+		dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", argv[2]);
 		exit(99);
 		}
 		rf = read(opf, buf, 1024);
@@ -36,13 +36,13 @@ int main(int argc, char *argv[])
 	e = close(opf);
 	if (e == -1)
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't close fd%d\n", opf);
+		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", opf);
 		exit(100);
 	}
 	er = close(opt);
 	if (er == -1)
 	{
-		dprintf(STDOUT_FILENO, "Error: Can't close fd%d\n", opt);
+		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", opt);
 		exit(100);
 	}
 	return (0);
