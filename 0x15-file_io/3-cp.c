@@ -1,5 +1,21 @@
 #include "main.h"
 /**
+ * cr_buf - hdhdhdjd
+ * @a: bdhdj
+ * Return: dhhd
+ */
+char *cr_buf(char *a)
+{
+	char *s;
+	s = malloc(sizeof(char) * 1024);
+	if (s == NULL)
+	{
+		dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", a);
+		exit(99);
+	}
+	return (s);
+}
+/**
  * main - djdjdjdjd
  * @argc: hdjdjdjd
  * @argv: jdjdjdj
@@ -8,13 +24,14 @@
 int main(int argc, char *argv[])
 {
 	int opf, opt, rf, wt, e, er;
-	char buf[1024];
+	char *buf;
 
 	if (argc != 3)
 	{
 		dprintf(STDOUT_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
+	buf = cr_buf(argv[2]);
 	opf = open(argv[1], O_RDONLY);
 	rf = read(opf, buf, 1024);
 	opt = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
