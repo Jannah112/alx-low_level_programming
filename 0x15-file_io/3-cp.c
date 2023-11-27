@@ -7,6 +7,7 @@
 char *cr_buf(char *a)
 {
 	char *s;
+
 	s = malloc(sizeof(char) * 1024);
 	if (s == NULL)
 	{
