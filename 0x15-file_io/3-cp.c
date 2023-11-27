@@ -17,6 +17,21 @@ char *cr_buf(char *a)
 	return (s);
 }
 /**
+ * f_close - ejsjsk
+ * @x: djjd
+ */
+void f_close(int x)
+{
+	int a;
+
+	a = close(x);
+	if (a == -1)
+	{
+		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", x);
+		exit(100);
+	}
+}
+/**
  * main - djdjdjdjd
  * @argc: hdjdjdjd
  * @argv: jdjdjdj
@@ -24,7 +39,7 @@ char *cr_buf(char *a)
  */
 int main(int argc, char *argv[])
 {
-	int opf, opt, rf, wt, e, er;
+	int opf, opt, rf, wt;
 	char *buf;
 
 	if (argc != 3)
@@ -40,29 +55,22 @@ int main(int argc, char *argv[])
 		if (opf == -1 || rf == -1)
 		{
 		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		free(buf);
 		exit(98);
 		}
 		wt = write(opt, buf, rf);
 		if (wt == -1 || opt == -1)
 		{
 		dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", argv[2]);
+		free(buf);
 		exit(99);
 		}
 		rf = read(opf, buf, 1024);
 		opt = open(argv[2], O_WRONLY | O_APPEND);
 	} while (rf > 0);
-	e = close(opf);
-	if (e == -1)
-	{
-		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", opf);
-		exit(100);
-	}
-	er = close(opt);
-	if (er == -1)
-	{
-		dprintf(STDOUT_FILENO, "Error: Can't close fd %d\n", opt);
-		exit(100);
-	}
+	f_close(opt);
+	f_close(opf);
+	free(buf);
 	return (0);
 }
 
