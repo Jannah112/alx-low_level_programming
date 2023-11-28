@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 		free(buf);
 		exit(98);
 		}
-		wt = write(opt, buf, strlen(buf));
+		wt = write(opt, buf, rf);
 		if (wt == -1 || opt == -1)
 		{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
