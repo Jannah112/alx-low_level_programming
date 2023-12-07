@@ -1,37 +1,42 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#include "shell.h"
+
 char *our_getenv(const char *name)
 {
 	char *path_value;
-	extern char **environ;
-	char **s = environ;
-	while (*s)
+	char *ac = NULL;
+	char **s;
+	int i = 0, x = 0;
+	while(environ[i])
 	{
-		path_value = strtok(*s, "=");
-		if (strcmp(*s, name) == 0)
+		x++;
+		i++;
+	}
+	x++;
+	s = malloc(sizeof(char *) * x);
+	i = 0;
+	while(environ[i])
+	{
+		s[i] = strdup(environ[i]);
+		i++;
+	}
+	s[i] = NULL;
+	i = 0;
+	while (s[i])
+	{
+		path_value = strtok(s[i], "=");
+		if(strcmp(path_value, name) == 0)
 		{
 			path_value = strtok(NULL, "=");
-			return (path_value);
+			ac = strdup(path_value);
 		}
-		s++;
+		i++;
 	}
-	return (NULL);
-}
-void print_env(void)
-{
-	extern char **environ;
-	char **s = environ;
-	while (*s)
+	i = 0;
+	while(s[i])
 	{
-		dprintf(STDOUT_FILENO, "%s\n", *s);
-		s++;
+		free(s[i]);
+		i++;
 	}
-}
-void main(void)
-{
-	char *v= our_getenv("PATH");
-	printf("%s\n", v);
-	print_env();
+	free(s);
+	return(ac);
 }

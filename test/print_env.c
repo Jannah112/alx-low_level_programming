@@ -1,9 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
-#include "g.h"
-void print_env()
+#include "shell.h"
+int print_env(void)
 {
 	char **s = environ;
 	while (*s)
@@ -12,8 +8,5 @@ void print_env()
 		write(STDOUT_FILENO, "\n", 1);
 		s++;
 	}
-}
-void main(void)
-{
-	print_env();
+	return (0);
 }
