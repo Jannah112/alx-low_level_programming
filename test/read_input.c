@@ -7,6 +7,11 @@ char *read_input(void)
 	ssize_t num_chars = 0;
 
 	num_chars = getline(&input, &size, stdin);
+	if(strcmp(input, "\n") == 0)
+	{
+		free(input);
+		return(NULL);
+	}
 	if (strcmp(input, "exit\n") == 0)
 	{
 		free(input);

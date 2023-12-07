@@ -1,10 +1,14 @@
-#include "main.h"
-#include <stdio.h>
+#include "shell.h"
 
-int main (void) 
+int main(int argc, char*argv[])
 {
-	int c = 0;
-	c = _printf("DOOMIE %s %c %% ");;
-	printf("%d", c);
+	char *input;
+	while(1)
+	{
+		write(STDOUT_FILENO, "$ ",2);
+		input = read_input();
+		if (input != NULL)
+			tok(input, argv[0]);
+	}
 	return (0);
 }
