@@ -15,6 +15,8 @@ char *our_getenv(const char *name);
 char *read_input(void);
 int malloc_return(char *str);
 void tok(char *input, char *p_name);
+void fre(char *, char *, char *);
+void fr(char *, char **, char *, char *, char *);
 int executes(char **argv);
 char *get_path(char *input);
 int cd(char **argv);

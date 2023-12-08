@@ -1,20 +1,57 @@
 #include "shell.h"
+/**
+ * fre - hfjdj
+ * @a: hfhfh
+ * @b: dhhfjfj
+ * @c: dhdhhd
+ */
+void fre(char *a, char *b, char *c)
+{
+	free(a);
+	free(b);
+	free(c);
+}
+/**
+ * fr - fhhddjj
+ * @a: dhdh
+ * @b: djjdjdj
+ * @c: fhdhjdh
+ * @d: dhhrh
+ * @e: rhhru
+ */
+void fr(char *a, char **b, char *c, char *d, char *e)
+{
+	int i;
 
+	i = 0;
+	free(a);
+	while (b[i])
+	{
+		free(b[i]);
+		i++;
+	}
+	free(b);
+	free(c);
+	free(d);
+	free(e);
+}
+/**
+ * tok - gdjddj
+ * @input: rhruru
+ * @p_name: djdjdjj
+ */
 void tok(char *input, char *p_name)
 {
-	char *input_tok = NULL, *tok_cpy = NULL;
-	char *token = NULL, *delim = " \n";
+	char *input_tok = NULL, *tok_cpy = NULL, *token = NULL, *delim = " \n";
 	char **argv;
 	int tok_num = 0, i = 0, x = 0;
 
-	input_tok = malloc(sizeof(char) * strlen(input));
-	malloc_return(input_tok);
-	strcpy(input_tok, input);
+	input_tok = strdup(input);
 	tok_cpy = strdup(input);
 	token = strtok(input_tok, delim);
-	while(token)
+	while (token)
 	{
-		if (strcmp(token , " ") == 0)
+		if (strcmp(token, " ") == 0)
 			token = strtok(NULL, delim);
 		else
 		{
@@ -24,9 +61,7 @@ void tok(char *input, char *p_name)
 	}
 	if (tok_num == 0)
 	{
-		free(input_tok);
-		free(tok_cpy);
-		free(input);
+		fre(input_tok, tok_cpy, input);
 		return;
 	}
 	tok_num++;
@@ -35,7 +70,7 @@ void tok(char *input, char *p_name)
 	token = strtok(tok_cpy, delim);
 	while (token)
 	{
-		argv[i] = malloc(sizeof(char)* strlen(token));
+		argv[i] = malloc(sizeof(char) * strlen(token));
 		malloc_return(argv[i]);
 		strcpy(argv[i], token);
 		token = strtok(NULL, delim);
@@ -45,15 +80,5 @@ void tok(char *input, char *p_name)
 	x = executes(argv);
 	if (x == 2)
 		printf("%s: %s: command not found\n", p_name, argv[0]);
-	i = 0;
-	while (argv[i])
-	{
-		free(argv[i]);
-		i++;
-	}
-	free(input);
-	free(argv);
-	free(tok_cpy);
-	free(token);
-	free(input_tok);
-	}
+	fr(input, argv, tok_cpy, token, input_tok);
+}
