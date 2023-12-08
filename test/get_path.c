@@ -1,5 +1,9 @@
 #include "shell.h"
-
+/**
+ * get_path - hjj
+ * @input: ghj
+ * Return: huu
+ */
 char *get_path(char *input)
 {
 	char *path = NULL, *path_cp = NULL, *file_path;
@@ -14,7 +18,7 @@ char *get_path(char *input)
 		path_cp = strdup(path);
 		input_len = strlen(input);
 		path_tok = strtok(path_cp, seperator);
-		while(path_tok != NULL)
+		while (path_tok != NULL)
 		{
 			dir_len = strlen(path_tok);
 			file_path = malloc(input_len + dir_len + 2);
@@ -22,11 +26,11 @@ char *get_path(char *input)
 			strcat(file_path, "/");
 			strcat(file_path, input);
 			strcat(file_path, "\0");
-			if(stat(file_path, &buf) == 0)
+			if (stat(file_path, &buf) == 0)
 			{
 				free(path);
 				free(path_cp);
-				return(file_path);
+				return (file_path);
 			}
 			else
 			{
@@ -38,7 +42,7 @@ char *get_path(char *input)
 	free(path);
 	free(path_tok);
 	free(path_cp);
-	if(stat(input, &buf) == 0)
-		return(input);
+	if (stat(input, &buf) == 0)
+		return (input);
 	return (NULL);
 }
