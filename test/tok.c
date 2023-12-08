@@ -14,8 +14,20 @@ void tok(char *input, char *p_name)
 	token = strtok(input_tok, delim);
 	while(token)
 	{
-		tok_num++;
-		token = strtok(NULL, delim);
+		if (strcmp(token , " ") == 0)
+			token = strtok(NULL, delim);
+		else
+		{
+			tok_num++;
+			token = strtok(NULL, delim);
+		}
+	}
+	if (tok_num == 0)
+	{
+		free(input_tok);
+		free(tok_cpy);
+		free(input);
+		return;
 	}
 	tok_num++;
 	argv = malloc(sizeof(char *) * tok_num);
@@ -44,4 +56,4 @@ void tok(char *input, char *p_name)
 	free(tok_cpy);
 	free(token);
 	free(input_tok);
-}
+	}
