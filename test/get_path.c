@@ -37,6 +37,7 @@ char *get_path(char *input)
 	}
 	free(path);
 	free(path_tok);
+	free(path_cp);
 	if(stat(input, &buf) == 0)
 		return(input);
 	return (NULL);
