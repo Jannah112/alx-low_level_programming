@@ -1,5 +1,8 @@
 #include "shell.h"
-
+/**
+ * read_input - jgjg
+ * Return: yughu
+ */
 char *read_input(void)
 {
 	char *input = NULL;
@@ -8,10 +11,10 @@ char *read_input(void)
 	char *space = " ";
 
 	num_chars = getline(&input, &size, stdin);
-	if(strcmp(input, "\n") == 0 || strcmp(input, " \n") == 0)
+	if (strcmp(input, "\n") == 0 || strcmp(input, " \n") == 0)
 	{
 		free(input);
-		return(NULL);
+		return (NULL);
 	}
 	if (strcmp(input, "exit\n") == 0)
 	{
@@ -32,5 +35,5 @@ char *read_input(void)
 			exit(EXIT_FAILURE);
 		}
 	}
-	return(input);
+	return (input);
 }

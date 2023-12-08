@@ -1,11 +1,9 @@
 #include "shell.h"
-
 /**
- *  * executes - dkfjd
- *   * @argv: kfdjfk
- *    *
- *     * Return: dkfjkd
- *     */
+ * executes - ghjj
+ * @argv: yuu
+ * Return: dkfjkd
+ */
 int executes(char **argv)
 {
 	pid_t id;
@@ -13,9 +11,7 @@ int executes(char **argv)
 	char *input = NULL, *cmd = NULL;
 
 	if (strcmp(argv[0], "cd") == 0)
-	{
 		return (cd(argv));
-	}
 	if (strcmp(argv[0], "env") == 0)
 		return (print_env());
 	if (argv)
@@ -43,9 +39,7 @@ int executes(char **argv)
 			exit(EXIT_FAILURE);
 		}
 		else
-		{
 			wait(NULL);
-		}
 		free(cmd);
 		return (0);
 	}
