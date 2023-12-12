@@ -1,12 +1,17 @@
 #include "shell.h"
-
+/**
+ * cd - ghjkf
+ * @argv: fhihg
+ * Return: fhjjh
+ */
 int cd(char **argv)
 {
 	int i;
+
 	if (argv[1] == NULL)
 	{
 		perror("enter directory...\n");
-		return(-1);
+		return (-1);
 	}
 	else
 	{

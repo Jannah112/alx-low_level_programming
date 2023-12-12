@@ -1,7 +1,12 @@
 #include "shell.h"
+/**
+ * print_env - dhfjjf
+ * Return: rhrhur
+ */
 int print_env(void)
 {
 	char **s = environ;
+
 	while (*s)
 	{
 		write(STDOUT_FILENO, *s, strlen(*s));

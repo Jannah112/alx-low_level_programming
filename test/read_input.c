@@ -8,7 +8,6 @@ char *read_input(void)
 	char *input = NULL;
 	size_t size = 0;
 	ssize_t num_chars = 0;
-	char *space = " ";
 
 	num_chars = getline(&input, &size, stdin);
 	if (strcmp(input, "\n") == 0 || strcmp(input, " \n") == 0)
