@@ -7,6 +7,6 @@
 int malloc_return(char *str)
 {
 	if (str == NULL)
-		exit(EXIT_FAILURE);
+		return (-1);
 	return (0);
 }

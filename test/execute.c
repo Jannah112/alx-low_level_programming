@@ -19,10 +19,7 @@ int executes(char **argv)
 		input = argv[0];
 		cmd = get_path(input);
 		if (cmd == NULL)
-		{
-			free(cmd);
 			return (2);
-		}
 		id = fork();
 		if (id == 0)
 		{
@@ -43,6 +40,5 @@ int executes(char **argv)
 		free(cmd);
 		return (0);
 	}
-	free(cmd);
 	return (-1);
 }
