@@ -35,7 +35,7 @@ int my_atoi(char *value, unsigned int ln)
 	}
 	for (i = 0; value[i] != 0; i++)
 	{
-	if(isdigit(value[i]))
+	if(!(isdigit(value[i])))
 	{
 	fprintf(stderr, "L<%d>: usage: push integer", ln);
 	exit (EXIT_FAILURE);
