@@ -18,8 +18,8 @@ void mod(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	*stack = (*stack)->next;
-	sum = (*stack)->n + (*stack)->prev->n;
-	(*stack)->n = sum;
+	num = (*stack)->n % (*stack)->prev->n;
+	(*stack)->n = num;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
