@@ -26,7 +26,7 @@ void exe_token(char *token, char *value, unsigned int ln)
 * @token: fjrjrj
 * Return: fhfjfj
 */
-void (*get_func(char *token))(struct,int)
+void (*get_func(char *token))(struct_t **, unsigned int)
 {
 	int i = 0;
 	
