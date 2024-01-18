@@ -19,7 +19,7 @@ void add(stack_t **stack, unsigned int line_number)
 	(*stack)->prev = NULL;
 }
 /**
- * add - dhfjdj
+ * sub - dhfjdj
  * @stack: fjfjfj
  * @line_number: fjfjfj
  */
@@ -39,7 +39,7 @@ void sub(stack_t **stack, unsigned int line_number)
 	(*stack)->prev = NULL;
 }
 /**
- * add - dhfjdj
+ * mul - dhfjdj
  * @stack: fjfjfj
  * @line_number: fjfjfj
  */
@@ -59,7 +59,7 @@ void mul(stack_t **stack, unsigned int line_number)
 	(*stack)->prev = NULL;
 }
 /**
- * add - dhfjdj
+ * div - dhfjdj
  * @stack: fjfjfj
  * @line_number: fjfjfj
  */
