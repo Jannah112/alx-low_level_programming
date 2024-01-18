@@ -5,7 +5,7 @@
  */
 void add(stack_t **stack, unsigned int line_number)
 {
-	int sumb= 0;
+	int sum = 0;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 	{
@@ -25,7 +25,7 @@ void add(stack_t **stack, unsigned int line_number)
  */
 void sub(stack_t **stack, unsigned int line_number)
 {
-	int sumb= 0;
+	int num;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 	{
@@ -33,8 +33,8 @@ void sub(stack_t **stack, unsigned int line_number)
 	exit (EXIT_FAILURE);
 	}
 	*stack = (*stack)->next;
-	sum = (*stack)->n - (*stack)->prev->n;
-	(*stack)->n = sum;
+	num = (*stack)->n - (*stack)->prev->n;
+	(*stack)->n = num;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
@@ -45,7 +45,7 @@ void sub(stack_t **stack, unsigned int line_number)
  */
 void mul(stack_t **stack, unsigned int line_number)
 {
-	int sumb= 0;
+	int num;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 	{
@@ -53,8 +53,8 @@ void mul(stack_t **stack, unsigned int line_number)
 	exit (EXIT_FAILURE);
 	}
 	*stack = (*stack)->next;
-	sum = (*stack)->n * (*stack)->prev->n;
-	(*stack)->n = sum;
+	num = (*stack)->n * (*stack)->prev->n;
+	(*stack)->n = num;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
@@ -65,7 +65,7 @@ void mul(stack_t **stack, unsigned int line_number)
  */
 void div(stack_t **stack, unsigned int line_number)
 {
-	int sumb= 0;
+	int num;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
 	{
@@ -78,8 +78,8 @@ void div(stack_t **stack, unsigned int line_number)
 		exit (EXIT_FAILURE);
 	}
 	*stack = (*stack)->next;
-	sum = (*stack)->n + (*stack)->prev->n;
-	(*stack)->n = sum;
+	num = (*stack)->n / (*stack)->prev->n;
+	(*stack)->n = num;
 	free((*sqck)->prev);
 	(*stack)->prev = NULL;
 }
