@@ -62,16 +62,16 @@ void push_top(char *value, unsigned int ln)
 	}
 	new->prev = NULL;
 	new->n = ac_val;
-	if (head == NULL)
+	if (top == NULL)
 	{
 	new->next = NULL;
-	head = new;
+	top = new;
 	}
 	else
 	{
-	while (head->prev != NULL)
-		head = head->prev;
-	new->next = head;
+	while (top->prev != NULL)
+		top = top->prev;
+	new->next = top;
 	head->prev = new;
 	head = new;
 	}
