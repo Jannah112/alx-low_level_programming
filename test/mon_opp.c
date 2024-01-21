@@ -1,9 +1,10 @@
+#include "monty.h"
 /**
- * mod - dhfjdj
+ * m_mod - dhfjdj
  * @stack: fjfjfj
  * @line_number: fjfjfj
  */
-void mod(stack_t **stack, unsigned int line_number)
+void m_mod(stack_t **stack, unsigned int line_number)
 {
 	int num;
 
@@ -24,11 +25,11 @@ void mod(stack_t **stack, unsigned int line_number)
 	(*stack)->prev = NULL;
 }
 /**
- * swap - fjfjfi
+ * m_swap - fjfjfi
  * @stack: jdjdj
  * @line_number: rirur
  */
-void swap(stack_t **stack, unsigned int line_number)
+void m_swap(stack_t **stack, unsigned int line_number)
 {
 	int temp;
 
@@ -42,11 +43,11 @@ void swap(stack_t **stack, unsigned int line_number)
 	(*stack)->next->n = temp;
 }
 /**
- * pint - djfjfj
+ * m_pint - djfjfj
  * @stack: fjfjfj
  * @line_number: djrjfj
  */
-void pint(stack_t **stack, unsigned int line_number)
+void m_pint(stack_t **stack, unsigned int line_number)
 {
 	if (stack == NULL || *stack == NULL)
 	{
@@ -56,18 +57,19 @@ void pint(stack_t **stack, unsigned int line_number)
 	printf("%d\n", (*stack)->n);
 }
 /**
- * pall - rjrjrj
+ * m_pall - rjrjrj
  * @stack: fjrjf
  * @line_number: fjfdj
  */
-void pall(stack_t **stack, unsigned int line_number)
+void m_pall(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
 	if (stack == NULL && (*stack) == NULL)
 	{
-		while ((*stack)->next != NULL)
-		{
-			printf("%d\n", (*stack)->n);
-			*stack = (*stack)->next;
-		}
+		return;
+	}
+	while ((*stack) != NULL)
+	{
+		printf("%d\n", (*stack)->n);
+		*stack = (*stack)->next;
 	}
 }

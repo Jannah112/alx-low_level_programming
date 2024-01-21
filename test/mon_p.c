@@ -1,32 +1,35 @@
+#include "monty.h"
+
 /**
-* pop - hfhfj
+* m_pop - hfhfj
 * @stack: djdjd
 * @line_number: djdjdjdj
 */
-void pop(stack_t **stack, unsigned int line_number)
+void m_pop(stack_t **stack, unsigned int line_number)
 {
-	if (stak == NULL || *stack == NULL)
+	if (stack == NULL || *stack == NULL)
 	{
 		fprintf(stderr, "L<%d>: can't pop an empty stack\n", line_number);
-		exit (EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
-	*stack = (*stack)->nex;
+	*stack = (*stack)->next;
 	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
 /**
 * my_atoi - djdjd
 * @value: rjdjdj
-* @line_number: djdjdj
+* @ln: djdjdj
 * Return: djdjdjdj
 */
 int my_atoi(char *value, unsigned int ln)
 {
 	int x = 1, val, i;
+
 	if (value == NULL)
 	{
 	fprintf(stderr, "L<%d>: usage: push integer", ln);
-	exit (EXIT_FAILURE);
+	exit(EXIT_FAILURE);
 	}
 	if (value[0] == '-')
 	{
@@ -35,44 +38,50 @@ int my_atoi(char *value, unsigned int ln)
 	}
 	for (i = 0; value[i] != 0; i++)
 	{
-	if(!(isdigit(value[i])))
+	if (!(isdigit(value[i])))
 	{
 	fprintf(stderr, "L<%d>: usage: push integer", ln);
-	exit (EXIT_FAILURE);
+	exit(EXIT_FAILURE);
 	}
 	}
 	val = atoi(value) * x;
 	return (val);
 }
 /**
-* push_top - djd
-* @value: djdjdj
-*/
-void push_top(char *value, unsigned int ln)
+ * new_node - djdj
+ * @value: vdhdh
+ * @ln: rgrrtg
+ */
+void new_node(char *value, unsigned int ln)
 {
-	struct_t *new;
-	int ac_val;
-	
-	ac_val = my_atoi(value, ln);
-	new = malloc(sizeof(struct_t));
+	stack_t *new;
+	int val;
+
+	new = malloc(sizeof(stack_t));
 	if (new == NULL)
 	{
-	fprintf(stderr, "Error: malloc failed");
-	exit (EXIT_FAILURE);
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
 	}
+	val = my_atoi(value, ln);
+	new->n = val;
 	new->prev = NULL;
-	new->n = ac_val;
+	new->next = NULL;
+	push_t(&new,ln);
+}
+void push_t(stack_t **new_node, __attribute__((unused))unsigned int ln)
+{
+	stack_t *tmp;
+
+	if (new_node == NULL || *new_node == NULL)
+		exit(EXIT_FAILURE);
 	if (top == NULL)
 	{
-	new->next = NULL;
-	top = new;
+		top = *new_node;
+		return;
 	}
-	else
-	{
-	while (top->prev != NULL)
-		top = top->prev;
-	new->next = top;
-	head->prev = new;
-	head = new;
-	}
+	tmp = top;
+	top = *new_node;
+	top->next = tmp;
+	tmp->prev = top;
 }

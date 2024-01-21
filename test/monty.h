@@ -23,9 +23,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 extern stack_t *top;
 /**
@@ -38,21 +38,23 @@ extern stack_t *top;
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-void (*get_func(char *token))(stack_t **,unsigned int);
+void (*get_func(char *token))(stack_t **, unsigned int);
 void exe_token(char *token, char *value, unsigned int ln);
-void mod(stack_t **stack, unsigned int line_number);
-void swap(stack_t **stack, unsigned int line_number);
-void pint(stack_t **stack, unsigned int line_number);
-void pall(stack_t **stack, unsigned int line_number);
-void div(stack_t **stack, unsigned int line_number);
-void mul(stack_t **stack, unsigned int line_number);
-void sub(stack_t **stack, unsigned int line_number);
-void add(stack_t **stack, unsigned int line_number);
-void pop(stack_t **stack, unsigned int line_number);
+void m_mod(stack_t **stack, unsigned int line_number);
+void m_swap(stack_t **stack, unsigned int line_number);
+void m_pint(stack_t **stack, unsigned int line_number);
+void m_pall(stack_t **stack, unsigned int line_number);
+void m_div(stack_t **stack, unsigned int line_number);
+void m_mul(stack_t **stack, unsigned int line_number);
+void m_sub(stack_t **stack, unsigned int line_number);
+void m_add(stack_t **stack, unsigned int line_number);
+void m_pop(stack_t **stack, unsigned int line_number);
 int my_atoi(char *value, unsigned int ln);
-void push_top(char *value, unsigned int ln);
+void new_node(char *, unsigned int);
+void push_t(stack_t **, unsigned int);
+void free_mem(void);
 
 #endif

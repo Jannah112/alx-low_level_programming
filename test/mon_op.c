@@ -1,9 +1,10 @@
+#include "monty.h"
 /**
- * add - dhfjdj
+ * m_add - dhfjdj
  * @stack: fjfjfj
  * @line_number: fjfjfj
  */
-void add(stack_t **stack, unsigned int line_number)
+void m_add(stack_t **stack, unsigned int line_number)
 {
 	int sum = 0;
 
@@ -19,11 +20,11 @@ void add(stack_t **stack, unsigned int line_number)
 	(*stack)->prev = NULL;
 }
 /**
- * sub - dhfjdj
+ * m_sub - dhfjdj
  * @stack: fjfjfj
  * @line_number: fjfjfj
  */
-void sub(stack_t **stack, unsigned int line_number)
+void m_sub(stack_t **stack, unsigned int line_number)
 {
 	int num;
 
@@ -39,11 +40,11 @@ void sub(stack_t **stack, unsigned int line_number)
 	(*stack)->prev = NULL;
 }
 /**
- * mul - dhfjdj
+ * m_mul - dhfjdj
  * @stack: fjfjfj
  * @line_number: fjfjfj
  */
-void mul(stack_t **stack, unsigned int line_number)
+void m_mul(stack_t **stack, unsigned int line_number)
 {
 	int num;
 
@@ -59,11 +60,11 @@ void mul(stack_t **stack, unsigned int line_number)
 	(*stack)->prev = NULL;
 }
 /**
- * div - dhfjdj
+ * m_div - dhfjdj
  * @stack: fjfjfj
  * @line_number: fjfjfj
  */
-void div(stack_t **stack, unsigned int line_number)
+void m_div(stack_t **stack, unsigned int line_number)
 {
 	int num;
 
@@ -72,7 +73,7 @@ void div(stack_t **stack, unsigned int line_number)
 	fprintf(stderr, "L<%d>: can't div, stack too short\n", line_number);
 	exit(EXIT_FAILURE);
 	}
-	if (*stack->n == 0)
+	if ((*stack)->n == 0)
 	{
 		fprintf(stderr, "L<%d>: division by zero\n", line_number);
 		exit(EXIT_FAILURE);
@@ -80,6 +81,6 @@ void div(stack_t **stack, unsigned int line_number)
 	*stack = (*stack)->next;
 	num = (*stack)->n / (*stack)->prev->n;
 	(*stack)->n = num;
-	free((*sqck)->prev);
+	free((*stack)->prev);
 	(*stack)->prev = NULL;
 }
